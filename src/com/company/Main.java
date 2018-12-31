@@ -29,12 +29,17 @@ public class Main {
     }
     //Method for Bubble sort
     static void bubbleShort(int[] array){
-        for (int i = 0; i<array.length-1; i++){
-            for (int j = i+1; j<array.length; j++){
-                if (array[i]<array[j]){
-                    int str = array[i];
-                    array[i] = array[j];
-                    array[j] = str;
+        boolean flag = false;
+        int str;
+        while (!flag){
+            for (int i = 0; i<array.length-1; i++){
+                for (int j = i+1; j<array.length; j++){
+                    if (array[i]<array[j]) {
+                        str = array[i];
+                        array[i] = array[j];
+                        array[j] = str;
+                        flag = true;
+                    }
                 }
             }
         }
